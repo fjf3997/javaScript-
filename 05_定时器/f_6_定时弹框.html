@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    
+        window.onload = function(){
+            var odiv1 = document.getElementById('div1');
+            function fnoutWindow(){
+                odiv1.style.display = 'block';
+            }
+            setTimeout(fnoutWindow, 2000);
+        }
+    </script>
+    <style>
+        .div1{
+            height: 300px;
+            width: 300px;
+            align-self: center;
+            background-color: pink;
+            float:auto;
+            border:1px;
+            position: relative;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1" id="div1"></div>
+</body>
+</html>

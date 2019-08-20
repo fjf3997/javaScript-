@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var oBody = document.getElementById('body1');
+            var sdata = window.location.search;
+            var sHash = window.location.hash;
+            alert(sHash);
+            var obtn1 = document.getElementById('btn1');
+            obtn1.onclick = function(){
+                window.location.href = "http://www.baidu.com";
+            }
+            !function(){
+                var aData = sdata.split("=");
+                var sArg = aData[1];
+                if(sArg ==1){
+                    oBody.style.backgroundColor = 'green';
+                }else if(sArg==2){
+                    oBody.style.backgroundColor = 'pink';
+                }
+            }()
+            
+        }
+    </script>
+</head>
+<body id="body1">
+    <input type="button" id="btn1" value="跳转到百度">
+</body>
+</html>

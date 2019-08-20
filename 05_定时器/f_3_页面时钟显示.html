@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var oDiv = document.getElementById('div1');
+            function fnTime(){
+                var now = new Date();
+                var iYear = now.getFullYear();
+                var iMonth = now.getMonth()+1;
+                var iWeek = now.getDay();
+                var iDay = now.getDate();
+                var iHour = now.getHours();
+                var iMinutes = now.getMinutes();
+                var iSeconde = now.getSeconds();
+                var sTr = '现在的时间是:' +iYear + '年' + iMonth + '月' + iDay + '日' + fnToWeek(iWeek) + ' '+ iHour + ':' + iMinutes + ':' + iSeconde;
+                oDiv.innerHTML = sTr;
+            }
+            fnTime();
+            setInterval(fnTime, 1000);
+            function fnToWeek(i){
+                switch(i){
+                    case 0:
+                        return '星期日';
+                    case 1:
+                        return '星期一';
+                    case 2:
+                        return '星期二';
+                    case 3:
+                        return '星期三';
+                    case 4:
+                        return '星期四';
+                    case 5:
+                        return '星期五';
+                    case 6:
+                        return '星期六';
+                }
+            }
+
+        }
+        
+
+
+
+
+    </script>
+    <style>
+        div{
+            font-size: 30px;
+            color: pink;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+</body>
+</html>

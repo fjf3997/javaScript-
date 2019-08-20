@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var oDiv = document.getElementById('div1');
+            function fnDaojishi(){
+                var sNow = new Date();
+                var sFuture = new Date(2019,7,23,24,0,0);
+                var sLeft = parseInt((sFuture-sNow)/1000);
+                var iDays = parseInt(sLeft/86400);
+                var iHour = parseInt((sLeft%86400)/3600);
+                var iMinutes = parseInt(((sLeft%86400)%3600)/60);
+                var iSecond = parseInt(sLeft%60);
+                var sTr = '距离8月24日还剩' + iDays +'天' + iHour + '小时' +iMinutes + '分钟' + iSecond + '秒';
+                oDiv.innerHTML = sTr;
+             }
+            fnDaojishi();
+            setInterval(fnDaojishi,1000);
+
+
+        }
+
+    </script>
+    <style>
+        div{
+            font-size: 30px;
+            color: pink;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+</body>
+</html>
