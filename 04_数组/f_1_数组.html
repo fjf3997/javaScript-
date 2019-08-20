@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var aList = new Array(1,2,3,4);
+        var aList2 = [1,2,3,'c'];
+        // alert(aList);
+        // alert(aList2);
+        aList.push('b');
+        aList2.pop();
+        // alert(aList);//1,2,3,4,b
+        // alert(aList2);1,2,3
+        aList.unshift('a');
+        aList2.shift();
+        // alert(aList);//a,1,2,3,4,b
+        // alert(aList2);//2,3
+        aList.reverse();
+        // alert(aList);b,4,3,2,1,a
+        // alert(aList.length);
+        alert(aList.indexOf(1));
+        alert(aList.join('-'));
+        aList.splice(2,0,'f','j','f');
+        alert(aList);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

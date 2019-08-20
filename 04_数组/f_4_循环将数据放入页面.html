@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var oList = document.getElementById('list');
+            var aList = ['美人鱼','疯狂动物城','魔兽','爱情公寓'];
+            var iLength = aList.length;
+            var sTr = '';
+            for(var i = 0;i<iLength;i++){
+                sTr += '<li>'+aList[i]+'</li>';
+            }
+            oList.innerHTML = sTr;
+        }
+    </script>
+    <style>
+        .list{
+            list-style: none;
+            margin: 50px auto 0;
+            padding: 0;
+            width: 300px;
+            height: 305;
+        }
+        .list li{
+            height: 60px;
+            border-bottom: 1px dotted #000;
+            line-height: 60px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="list" id="list">
+        
+    </ul>
+</body>
+</html>

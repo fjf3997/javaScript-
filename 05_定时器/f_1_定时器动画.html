@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var oDiv1 = document.getElementById('div1');
+            var iLeft = 0;
+            var iSpeed = 3;
+            function moving(){
+                iLeft += iSpeed;
+                oDiv1.style.left = iLeft + "px";
+                if(iLeft>700){
+                    iSpeed = -3;
+                }
+                if(iLeft<0){
+                    iSpeed = 3;
+                }
+            }
+            var timer = setInterval(moving, 5);
+        }
+    </script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 200px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+</body>
+</html>
